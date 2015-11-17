@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>hidden and is not referenced by aria-labelledby or aria-describedby, nor referenced by a native host language text alternative element or attribute</title>
+<link href="testcases.css" rel="stylesheet" />
+</head>
+
+<body>
+<h1>2A If the current node is hidden and is not referenced by aria-labelledby or aria-describedby, nor referenced by a native host language text alternative element or attribute</h1>
+
+<p></p>
+
+<div>
+<table class="tests">
+<tr>
+	<th>test case name</th>
+	<th>test case markup</th>
+	<th>inline test case</th>
+	<th>expected results</th>
+	<th>link to test file</th>
+	<th>link to webdriver file</th>
+	<th>notes</th>
+</tr>
+<tr>
+	<td>single hidden div with aria-hidden</td>
+	<td>&lt;div aria-hidden&gt;test&lt;/div&gt;</td>
+	<td><div aria-hidden>test</div></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td>In Edge, a div without a role wouldn't have an accessible anyway</td>
+</tr>
+<tr>
+	<td>single hidden button with aria-hidden</td>
+	<td>&lt;button aria-hidden&gt;test&lt;/button&gt;</td>
+	<td><button aria-hidden>test</button></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>single hidden div with hidden attribute</td>
+	<td>&lt;div hidden&gt;test&lt;/div&gt;</td>
+	<td><div hidden>test</div></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td>In Edge, a div without a role wouldn't have an accessible anyway</td>
+</tr>
+<tr>
+	<td>single hidden button with hidden attribute</td>
+	<td>&lt;button hidden&gt;test&lt;/button&gt;</td>
+	<td><button hidden>test</button></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>single hidden div with display:none</td>
+	<td>&lt;div style="display:none;"&gt;test&lt;/div&gt;</td>
+	<td><div style="display:none;">test</div></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td>In Edge, a div without a role wouldn't have an accessible anyway</td>
+</tr>
+<tr>
+	<td>single hidden button with display:none</td>
+	<td>&lt;button style="display:none;"&gt;test&lt;/button&gt;</td>
+	<td><button style="display:none;">test</button></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>single hidden div with display:none</td>
+	<td>&lt;div style="visibility:hidden;"&gt;test&lt;/div&gt;</td>
+	<td><div style="visibility:hidden;">test</div></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td>In Edge, a div without a role wouldn't have an accessible anyway</td>
+</tr>
+<tr>
+	<td>single hidden button with display:none</td>
+	<td>&lt;button style="visibility:hidden;"&gt;test&lt;/button&gt;</td>
+	<td><button style="visibility:hidden;">test</button></td>
+	<td>no accessible</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</table>
+<!--
+single hidden node with @hidden
+single hidden node with display:none
+single node with visibility:hidden @@is this considerend 'hidden'?
+single node with height and width = 0 @@is this considerend 'hidden'?
+single node positioned offscreen @@is this considerend 'hidden'?
+
+each with div and a link
+-->
+
+</div>
+</body>
